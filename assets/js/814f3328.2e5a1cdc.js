@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"KusionStack Open Day","permalink":"/blog/2022-open-day"},{"title":"KCL\u4e91\u539f\u751f\u914d\u7f6e\u7b56\u7565\u8bed\u8a00","permalink":"/blog/2021-kcl-intro"}]}')}}]);
