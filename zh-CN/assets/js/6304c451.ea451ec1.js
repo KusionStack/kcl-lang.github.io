@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[4961],{7548:e=>{e.exports=JSON.parse('{"allTagsPath":"/zh-CN/blog/tags","slug":"/zh-CN/blog/tags/compiler","name":"Compiler","count":1,"permalink":"/zh-CN/blog/tags/compiler"}')}}]);
