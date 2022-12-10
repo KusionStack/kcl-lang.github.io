@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kcl-lang.github.io/zh-CN/blog</id>
     <title>Abstraction  Validation  Production-Ready Blog</title>
-    <updated>2022-12-06T00:00:00.000Z</updated>
+    <updated>2022-12-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kcl-lang.github.io/zh-CN/blog"/>
     <subtitle>Abstraction  Validation  Production-Ready Blog</subtitle>
     <icon>https://kcl-lang.github.io/zh-CN/img/kcl.png</icon>
+    <entry>
+        <title type="html"><![CDATA[OSDT 2022 会议 KCL 介绍内容]]></title>
+        <id>2022-kcl-osdt-meeting</id>
+        <link href="https://kcl-lang.github.io/zh-CN/blog/2022-kcl-osdt-meeting"/>
+        <updated>2022-12-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[PDF 下载]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://kcl-lang.github.io/talks/kcl-osdt2022.pdf" target="_blank" rel="noopener noreferrer">PDF 下载</a></p>]]></content>
+        <author>
+            <name>徐鹏飞</name>
+        </author>
+        <category label="KCL" term="KCL"/>
+        <category label="Configuration" term="Configuration"/>
+        <category label="Policy" term="Policy"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[KCL v0.4.4 发布日志]]></title>
         <id>2022-kcl-0.4.4-release-blog</id>

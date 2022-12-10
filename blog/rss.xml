@@ -4,9 +4,20 @@
         <title>Abstraction  Validation  Production-Ready Blog</title>
         <link>https://kcl-lang.github.io/blog</link>
         <description>Abstraction  Validation  Production-Ready Blog</description>
-        <lastBuildDate>Tue, 06 Dec 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 10 Dec 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[KCL Introduction on OSDT 2022 Meeting]]></title>
+            <link>https://kcl-lang.github.io/blog/2022-kcl-osdt-meeting</link>
+            <guid>2022-kcl-osdt-meeting</guid>
+            <pubDate>Sat, 10 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Download PDF]]></description>
+            <content:encoded><![CDATA[<p><a href="https://kcl-lang.github.io/talks/kcl-osdt2022.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></p>]]></content:encoded>
+            <category>KCL</category>
+            <category>Configuration</category>
+            <category>Policy</category>
+        </item>
         <item>
             <title><![CDATA[KCL v0.4.4 Release Blog]]></title>
             <link>https://kcl-lang.github.io/blog/2022-kcl-0.4.4-release-blog</link>
