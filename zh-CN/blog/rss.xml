@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Abstraction  Validation  Production-Ready Blog</title>
+        <title>KCL programming language. Blog</title>
         <link>https://kcl-lang.github.io/zh-CN/blog</link>
-        <description>Abstraction  Validation  Production-Ready Blog</description>
+        <description>KCL programming language. Blog</description>
         <lastBuildDate>Sat, 10 Dec 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
