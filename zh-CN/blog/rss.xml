@@ -54,7 +54,7 @@
             <category>Configuration</category>
         </item>
         <item>
-            <title><![CDATA[The Landscape of Declarative Configuration]]></title>
+            <title><![CDATA[声明式配置技术概述]]></title>
             <link>https://kcl-lang.github.io/zh-CN/blog/2022-declarative-config-overview</link>
             <guid>2022-declarative-config-overview</guid>
             <pubDate>Thu, 15 Sep 2022 00:00:00 GMT</pubDate>
