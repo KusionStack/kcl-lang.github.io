@@ -91,8 +91,6 @@ checkExistingKCL() {
         echo -e "\nKCL is detected:"
         $KCL_CLI_FILE -V
         echo -e "Reinstalling KCL into ${KCL_CLI_FILE} ...\n"
-    else
-        echo -e "Installing KCL ...\n"
     fi
 }
 
@@ -128,8 +126,10 @@ downloadFile() {
     fi
 
     if [ ! -f "$ARTIFACT_TMP_FILE" ]; then
-        echo "failed to download $DOWNLOAD_URL ..."
+        echo "Failed to download $DOWNLOAD_URL ..."
         exit 1
+    else
+        echo "Scucessful to download $DOWNLOAD_URL"
     fi
 }
 
@@ -165,7 +165,7 @@ installFile() {
     fi
 
     # Copy temp kclvm folder into the target installation directory.
-    echo "Copy the kclvm folder $tmp_kclvm_folder the target installation directory $KCL_INSTALL_DIR"
+    echo "Copy the kclvm folder $tmp_kclvm_folder into the target installation directory $KCL_INSTALL_DIR"
     runAsRoot cp -rf $tmp_kclvm_folder $KCL_INSTALL_DIR
 
     if [ -f "$KCL_CLI_FILE" ]; then
@@ -208,7 +208,7 @@ getSystemInfo
 checkHttpRequestCLI
 
 if [ -z "$1" ]; then
-    echo "Getting the latest KCL..."
+    echo "Getting the latest KCL ..."
     getLatestRelease
 else
     ret_val=v$1
@@ -217,7 +217,7 @@ fi
 verifySupported $ret_val
 checkExistingKCL
 
-echo "Installing $ret_val KCL..."
+echo "Find the latest KCL version $ret_val"
 
 downloadFile $ret_val
 installFile
