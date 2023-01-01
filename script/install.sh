@@ -90,9 +90,9 @@ checkExistingKCL() {
         # Check the KCL CLI version
         echo -e "\nKCL is detected:"
         $KCL_CLI_FILE -V
-        echo -e "Reinstalling KCL - ${KCL_CLI_FILE}...\n"
+        echo -e "Reinstalling KCL into ${KCL_CLI_FILE} ...\n"
     else
-        echo -e "Installing KCL...\n"
+        echo -e "Installing KCL ...\n"
     fi
 }
 
@@ -171,14 +171,9 @@ installFile() {
     # Copy temp kclvm folder into the target installation directory.
     runAsRoot cp -rf "$tmp_kclvm_folder" "$KCL_INSTALL_DIR"
 
-    if [ -f "$KCL_CLI_FILE" ]; then
-        echo "$KCL_CLI_FILENAME installed into $KCL_INSTALL_DIR/kclvm/bin successfully."
-        # Check the KCL CLI version
-        $KCL_CLI_FILE -V
-    else 
-        echo "Failed to install KCL into $KCL_CLI_FILE"
-        exit 1
-    fi
+    # Check the KCL CLI version
+    $KCL_CLI_FILE -V
+    echo "$KCL_CLI_FILENAME installed into $KCL_INSTALL_DIR/kclvm/bin successfully."
 }
 
 fail_trap() {
