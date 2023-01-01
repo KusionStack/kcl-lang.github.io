@@ -31,7 +31,7 @@ GITHUB_REPO=KCLVM
 # KCL filename
 KCL_CLI_FILENAME=kcl
 
-KCL_CLI_FILE="${KCL_INSTALL_DIR}/bin/${KCL_CLI_FILENAME}"
+KCL_CLI_FILE="${KCL_INSTALL_DIR}/kclvm/bin/${KCL_CLI_FILENAME}"
 
 getSystemInfo() {
     ARCH=$(uname -m)
@@ -156,7 +156,7 @@ isReleaseAvailable() {
 
 installFile() {
     tar xf "$ARTIFACT_TMP_FILE" -C "$KCL_TMP_ROOT"
-    local tmp_root_kcl="$KCL_TMP_ROOT/bin/$KCL_CLI_FILENAME"
+    local tmp_root_kcl="$KCL_TMP_ROOT/kclvm/bin/$KCL_CLI_FILENAME"
 
     if [ ! -f "$tmp_root_kcl" ]; then
         echo "Failed to unpack KCL executable."
@@ -172,7 +172,7 @@ installFile() {
     if [ -f "$KCL_CLI_FILE" ]; then
         echo "$KCL_CLI_FILENAME installed into $KCL_INSTALL_DIR successfully."
 
-        $KCL_CLI_FILE --version
+        $KCL_CLI_FILE -V
     else 
         echo "Failed to install $KCL_CLI_FILENAME"
         exit 1
@@ -196,6 +196,7 @@ cleanup() {
 }
 
 installCompleted() {
+    echo -e "\nPlease add ${KCL_INSTALL_DIR}/kclvm/bin into your PATH"
     echo -e "\nTo get started with KCL, please visit https://kcl-lang.io/docs/user_docs/getting-started/kcl-quick-start"
 }
 
