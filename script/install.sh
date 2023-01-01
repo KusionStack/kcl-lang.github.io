@@ -156,24 +156,25 @@ isReleaseAvailable() {
 }
 
 installFile() {
-    tar xf "$ARTIFACT_TMP_FILE" -C "$KCL_TMP_ROOT"
-    local tmp_kclvm_folder="$KCL_TMP_ROOT/kclvm/"
+    tar xf $ARTIFACT_TMP_FILE -C $KCL_TMP_ROOT
+    local tmp_kclvm_folder=$KCL_TMP_ROOT/kclvm/
 
     if [ ! -f "$tmp_kclvm_folder/bin/kcl" ]; then
         echo "Failed to unpack KCL executable."
         exit 1
     fi
 
-    if [ -f "$KCL_CLI_FILE" ]; then
-        runAsRoot rm "$KCL_CLI_FILE"
-    fi
-
     # Copy temp kclvm folder into the target installation directory.
-    runAsRoot cp -rf "$tmp_kclvm_folder" "$KCL_INSTALL_DIR"
+    runAsRoot cp -rf $tmp_kclvm_folder $KCL_INSTALL_DIR
 
-    # Check the KCL CLI version
-    $KCL_CLI_FILE -V
-    echo "$KCL_CLI_FILENAME installed into $KCL_INSTALL_DIR/kclvm/bin successfully."
+    if [ -f "$KCL_CLI_FILE" ]; then
+        echo "$KCL_CLI_FILENAME installed into $KCL_INSTALL_DIR/kclvm/bin successfully."
+        # Check the KCL CLI version
+        $KCL_CLI_FILE -V
+    else 
+        echo "Failed to install KCL into $KCL_CLI_FILE"
+        exit 1
+    fi
 }
 
 fail_trap() {
