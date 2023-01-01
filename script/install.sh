@@ -16,7 +16,7 @@
 # ------------------------------------------------------------
 
 # KCL location
-: ${KCL_INSTALL_DIR:="/usr/local/"}
+: ${KCL_INSTALL_DIR:="/usr/local"}
 
 # sudo is required to copy binary to KCL_INSTALL_DIR for linux
 : ${USE_SUDO:="false"}
@@ -44,7 +44,7 @@ getSystemInfo() {
     OS=$(echo `uname`|tr '[:upper:]' '[:lower:]')
 
     # Most linux distro needs root permission to copy the file to /usr/local/
-    if [[ "$OS" == "linux" || "$OS" == "darwin" ]] && [ "$KCL_INSTALL_DIR" == "/usr/local/" ]; then
+    if [[ "$OS" == "linux" || "$OS" == "darwin" ]] && [ "$KCL_INSTALL_DIR" == "/usr/local" ]; then
         USE_SUDO="true"
     fi
 }
