@@ -30,8 +30,8 @@ GITHUB_REPO=KCLVM
 
 # KCL filename
 KCL_CLI_FILENAME=kcl
-
-KCL_CLI_FILE="${KCL_INSTALL_DIR}/kclvm/bin/${KCL_CLI_FILENAME}"
+# KCL file path
+KCL_CLI_FILE=${KCL_INSTALL_DIR}/kclvm/bin/${KCL_CLI_FILENAME}
 
 getSystemInfo() {
     ARCH=$(uname -m)
