@@ -72,6 +72,7 @@ runAsRoot() {
         CMD="sudo $CMD"
     fi
 
+    $CMD
 }
 
 checkHttpRequestCLI() {
@@ -166,8 +167,8 @@ installFile() {
 
     # Copy temp kclvm folder into the target installation directory.
     echo "Copy the kclvm folder $tmp_kclvm_folder into the target installation directory $KCL_INSTALL_DIR"
-    sudo cp -rf $tmp_kclvm_folder $KCL_INSTALL_DIR
-    ls $KCL_INSTALL_DIR
+    runAsRoot cp -rf $tmp_kclvm_folder $KCL_INSTALL_DIR
+
     if [ -f "$KCL_CLI_FILE" ]; then
         echo "$KCL_CLI_FILENAME installed into $KCL_INSTALL_DIR/kclvm/bin successfully."
         # Check the KCL CLI version
